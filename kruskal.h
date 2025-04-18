@@ -10,6 +10,7 @@ using Edge = std::pair<int, std::pair<int, int>>;
 
 // Function declaration for Kruskals algorithm
 // takes amount of vertices, V, and vector containing edges
+// TODO: more review pass by reference, pointers
 std::vector<Edge> kruskal(int V, std::vector<Edge> &edges);
 
 #endif
