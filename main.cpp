@@ -1,5 +1,8 @@
 #include "kruskal.h"
 #include <iostream>
+#include <fstream>
+
+// using namespace std;
 
 int main() {
     int V = 4; // Amount of vertices
