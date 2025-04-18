@@ -9,7 +9,6 @@
 int find(int parent[], int i) {
     if (parent[i] != i) {
         // path compression -> make all nodes on path from i to root point directly to root
-        // necessary?
         parent[i] = find(parent, parent[i]);
     }
     return parent[i];
@@ -37,7 +36,7 @@ std::vector<Edge> kruskal(int V, std::vector<Edge>& edges) {
         int u = edge.second.first;
         int v = edge.second.second;
 
-        // if u and v are in diff sets, include edge in MST (what is MST?)
+        // if u and v are in diff sets, include edge in MST (Minimum Spanning Tree)
         if (find(parent, u) != find(parent, v)) {
             result.push_back(edge);
             unionSets(parent, u, v); // merge sets
