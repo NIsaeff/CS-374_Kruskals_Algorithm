@@ -24,7 +24,7 @@ This will:
   - Line with `<V> <E>` (vertices and edges)
   - Then `E` lines of `<u> <v> <w>` (edge from u to v with weight w)
 
-### Example:
+### Example: (Two example trees, one 4 nodes 5 edges, other 3 nodes 3 edges)
 ```
 2
 4 5
@@ -38,10 +38,4 @@ This will:
 1 2 2
 0 2 3
 ```
-
-## ✏️ Editing Graphs
-
-- To add/edit graphs, modify `graphs.txt`.
-- Ensure the first number matches the number of graphs.
-- Vertices are 0-indexed (0 to V-1).
 

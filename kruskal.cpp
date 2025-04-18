@@ -23,20 +23,24 @@ void unionSets(int parent[], int x, int y) {
 // function containing full kruskal's algo
 std::vector<Edge> kruskal(int V, std::vector<Edge>& edges) {
     std::vector <Edge> result;
+    // step 1 sort edges by weight
     std::sort(edges.begin(), edges.end());
 
     int parent[V];
     for (int i = 0; i < V; ++i){
-        // initialize each node as own parent (what is a disjoint set?)
+        // initialize each node as own parent
         parent[i] = i;
     }
 
-    // iterate through edges, pick edges dont form cycle
+    // step 2: iterate through edges, pick edges that dont form cycle
+    // repeat for each edge in edges
     for (const auto& edge : edges) {
+        // for each edge {weight, {u, v}}, extract the two vertices u and v
         int u = edge.second.first;
         int v = edge.second.second;
 
         // if u and v are in diff sets, include edge in MST (Minimum Spanning Tree)
+        // else u and v are in the same set, then adding the edge from u and v will for a cycle
         if (find(parent, u) != find(parent, v)) {
             result.push_back(edge);
             unionSets(parent, u, v); // merge sets
