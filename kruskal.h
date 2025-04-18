@@ -8,7 +8,7 @@
 //
 using Edge = std::pair<int, std::pair<int, int>>;
 
-// Function declaration for Kruska;s algorithm
+// Function declaration for Kruskals algorithm
 // takes
 std::vector<Edge> kruskal(int V, std::vector<Edge> &edges);
 
